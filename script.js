@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (oppgaveTekst !== ""/* sjekker om det som er skrevet er ikke lik en tom string*/ ) {
             /* lager en ny liste i HTML */ const li = document.createElement("li");
             li.innerHTML = `
-                <input type="checkbox" class="oppgave-checkbox">
+                <input type="checkbox" class="task-checkbox">
                 <span>${oppgaveTekst}</span>
-                <button class ="Slett">Slett</button>
+                <button class="slett">Slett</button>
                 `;
             
             oppgaveListe.appendChild(li);
