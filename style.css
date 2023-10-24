@@ -1,18 +1,48 @@
-#TODO-List {
-    border: 1px solid;
-    width: 400px;
-    height: 100px;
-    margin: auto;
+body {
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    background-color: burlywood;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+
+
+
+.TODO-List {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: aquamarine;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(red, green, blue, alpha);
+}
+
+h1 {
+    color: #666;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     
 }
 
-#Liste {
-    border: 1px solid;
-    width: 400px;
-    height: 300px;
-    margin: auto;
-    text-align: center;
-    background-color: burlywood;
+li {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
