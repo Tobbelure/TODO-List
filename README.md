@@ -6,3 +6,9 @@
 # Made buttons work with click function
 # Added some comments to tell what the different lines does
 # The function and purpose with this TODO-list is for people so they wont forget and just add more tasks they want to do and what they need for example a shoppinglist or a bucketlist
+# When the page loades, the account or user will be entered in to the input box to write right away without having to click the box
+# This shows what kind of quests/tasks and list the user want to make
+# It will make a list when the tasks are added
+# If for example the user accidently add a typo in the task, they can delete the task by clicking "slett" or the delete button
+# When user is finished/done with the task, they can check of in the checkbox to make it checked so its done.
+# When a task is done, and the checkbox is checked, there will come a line across the task which marks it as done
