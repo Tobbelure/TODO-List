@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const oppgaveInput = document.getElementById("oppgaveInput");
     const addOppgaveButton = document.getElementById("addOppgaveButton");
     const oppgaveListe = document.getElementById("oppgaveListe");
+    const poengSum = document.getElementById("poengSum");
 
 
     // legger til klikk funksjon til knappen
