@@ -1,45 +1,50 @@
-// gjør at koden ikke starter før siden er lastet ferdig
+// Variabel for å holde poengsummen og totalt antall oppgaver
+let poengSummen = 0;
+let totaltAntallOppgaver = 0;
+
 document.addEventListener("DOMContentLoaded", function () {
+    // ... (eksisterende kode)
 
-    // variabler for inputen, boksen og listen jeg laget i index filen
-    const oppgaveInput = document.getElementById("oppgaveInput");
-    const addOppgaveButton = document.getElementById("addOppgaveButton");
-    const oppgaveListe = document.getElementById("oppgaveListe");
-    const poengSum = document.getElementById("poengSum");
+    // Legg til en funksjon for å oppdatere poengsum og totalt antall oppgaver
+    function oppdaterPoengsum() {
+        const fullførteOppgaver = document.querySelectorAll(".task-checkbox:checked").length;
+        totaltAntallOppgaver = document.querySelectorAll(".task-checkbox").length;
+        poengSummen = fullførteOppgaver;
+        poengSum.textContent = `${poengSummen}/${totaltAntallOppgaver} oppgaver ferdig`;
+    }
 
+    // Legg til en sjekk når oppgavene lastes for å oppdatere poengsummen
+    oppdaterPoengsum();
 
-    // legger til klikk funksjon til knappen
+    oppgaveListe.addEventListener("change", function (event) {
+        if (event.target.classList.contains("task-checkbox")) {
+            oppdaterPoengsum();
+            const taskSpan = event.target.nextElementSibling;
+            taskSpan.style.textDecoration = event.target.checked ? "line-through" : "none";
+        }
+    });
+
+    // legger til checkbokser og slett knapper
     addOppgaveButton.addEventListener("click", function () {
         const oppgaveTekst = oppgaveInput.value.trim();
 
-
-
-    // sjekker om bruker har skrevet noe inn i oppgaveboksen eller om den er tom
-        if (oppgaveTekst !== ""/* sjekker om det som er skrevet er ikke lik en tom string*/ ) {
-            /* lager en ny liste i HTML */ const li = document.createElement("li");
+        if (oppgaveTekst !== "") {
+            const li = document.createElement("li");
             li.innerHTML = `
                 <input type="checkbox" class="task-checkbox">
                 <span>${oppgaveTekst}</span>
                 <button class="slett">Slett</button>
-                `;
-            
+            `;
+
             oppgaveListe.appendChild(li);
             oppgaveInput.value = "";
 
-
-            // legger til en slettboks som fjerner en oppgave som bruker har laget
+            // får slett knappen til å fjerne en oppgave
             const slettKnapp = li.querySelector(".slett");
             slettKnapp.addEventListener("click", function () {
                 li.remove();
+                oppdaterPoengsum();
             });
-        }
-    });
-    // lager en linje gjennom oppgaver som er fullført/checked
-    oppgaveListe.addEventListener("change", function (event) {
-        if (event.target.classList.contains("task-checkbox")) {
-            const taskSpan = event.target.nextElementSibling;
-            taskSpan.style.textDecoration = event.target.checked ? "line-through" : "none";
-
         }
     });
 });

@@ -7,12 +7,17 @@
     <title>TODO-List</title>
 </head>
 <body>
-    <div class="TODO-List">
-    <h1><input type="text" id="TODOName" placeholder="Skriv inn en Tittel"></h1>
+    <!--To do listen-->
+<div class="TODO-List">
+    <!--inputten her gjør at brukeren er rett på fokus til å skrive når siden laster inn-->
+    <h1><input autofocus type="text" id="TODOName" placeholder="Skriv inn en Tittel"></h1>
+    <!--Bruker kan skrive inn egne oppgaver de har lyst til å gjøre-->
     <input type="text" id="oppgaveInput" placeholder="Skriv inn ny oppgave">
+    <!--Legger til en knapp som gjør at du legger til oppgaven i en liste-->
     <button id="addOppgaveButton">Legg til</button>
     <ul id="oppgaveListe"></ul>
-    <h4 id="poengSum">0/10 oppgaver ferdig</h4>
+    <!--Viser hvor mange oppgaver som er ferdig-->
+    <h4 id="poengSum">0/X oppgaver ferdig</h4>
 </div>
     <script src="script.js"></script>
 </body>
