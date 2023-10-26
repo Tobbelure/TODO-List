@@ -13,3 +13,4 @@
 # When user is finished/done with the task, they can check of in the checkbox to make it checked so its done.
 # When a task is done, and the checkbox is checked, there will come a line across the task which marks it as done
 # Users also have the ability to hit enter instead of clicking the "legg til" button to add a task to the list
+# The max length of number of characters in 1 task is 20
