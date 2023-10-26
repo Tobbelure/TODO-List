@@ -1,3 +1,5 @@
+
+/* legger til bakgrunnsfarge og tekst font for bodyn */
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
@@ -7,6 +9,7 @@ body {
     color: #fff;
 }
 
+/* bestemmer hvor stor listen skal være og hvilke farger den skal ha og hvor på skjermen den skal være*/
 .TODO-List {
     max-width: 800px;
     margin: 0 auto;
@@ -19,10 +22,13 @@ body {
     align-items: center;
 }
 
+
+/* størrelse op titelen*/    
 h1 {
     font-size: 36px;
 }
 
+/* legger til farge og størrelse på inputten */
 input[type="text"] {
     width: 80%;
     padding: 10px;
@@ -34,6 +40,8 @@ input[type="text"] {
     margin-right: 20px;
 }
 
+
+/* legger til bakgrunnsfarge på knappene og tekstfarger på knappene, størrlse på knappene osv. */
 button {
     padding: 10px 20px;
     background-color: #3498db;
@@ -63,6 +71,7 @@ li {
     font-size: 18px;
 }
 
+/* hvor stor checkboksense skal være */
 .task-checkbox {
     width: 25px;
     height: 25px;

@@ -12,3 +12,4 @@
 # If for example the user accidently add a typo in the task, they can delete the task by clicking "slett" or the delete button
 # When user is finished/done with the task, they can check of in the checkbox to make it checked so its done.
 # When a task is done, and the checkbox is checked, there will come a line across the task which marks it as done
+# Users also have the ability to hit enter instead of clicking the "legg til" button to add a task to the list
