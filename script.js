@@ -4,6 +4,21 @@ let totaltAntallOppgaver = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
     
+
+    // legger til en knapp som kan slette alle oppgavene så du slipper å gjøre det selv
+    const slettAlleOppgaverKnapp = document.getElementById("slettAlleOppgavene");
+    slettAlleOppgaverKnapp.addEventListener("click", function() {
+        const oppgaver = document.querySelectorAll("li");
+        oppgaver.forEach(function (oppgave) {
+            oppgave.remove();
+        });
+
+        // nullstiller poengsummen etter at alle oppgavene har blitt slettet
+        poengSummen = 0;
+        totaltAntallOppgaver = 0;
+        oppdaterPoengsum();
+    });
+    
     // gjør at hvis bruker klikker enter så legger den til oppgaven i listen
     oppgaveInput.addEventListener("keyup", function (event) {
         if (event.key === "Enter") {
