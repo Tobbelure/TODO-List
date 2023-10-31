@@ -5,7 +5,8 @@
  - Added variables for my input, box and list
  - Made buttons work with click function
  - Added some comments to tell what the different lines does
- # The function and purpose with this TODO-list is for people so they wont forget and just add more tasks they want to do and what they need for example a shoppinglist or a bucketlist 
+ - The function and purpose with this TODO-list is for people so they wont forget and just add more tasks they want to do and what they need forexample.
+ a shoppinglist or a bucketlist 
  - When the page loades, the account or user will be entered in to the input box to write right away without having to click the box
  - This shows what kind of quests/tasks and list the user want to make
 - It will make a list when the tasks are added
