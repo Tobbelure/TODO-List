@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // gjør at hvis bruker klikker enter så legger den til oppgaven i listen
     oppgaveInput.addEventListener("keyup", function (event) {
         if (event.key === "Enter") {
-            leggTilOppgave();
+            addTask();
         }
     });
 
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     addOppgaveButton.addEventListener("click", leggTilOppgave);
 
     // legger til ny oppgave i listen
-    function leggTilOppgave() {
+    function addTask() {
         const oppgaveTekst = oppgaveInput.value.trim();
 
         // Hvis oppgaveteksten ikke er tom, så oppretter den en ny oppgave i listen
