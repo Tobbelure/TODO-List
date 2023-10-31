@@ -1,9 +1,8 @@
-// Variabel for å holde poengsummen og totalt antall oppgaver
 let poengSummen = 0;
 let totaltAntallOppgaver = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
-    
+    oppdaterPoengsum();
 
     // legger til en knapp som kan slette alle oppgavene så du slipper å gjøre det selv
     const slettAlleOppgaverKnapp = document.getElementById("slettAlleOppgavene");
@@ -50,6 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
             // Tømmer input feltet etter at brukeren har laget en oppgave, slik at brukeren igjen kan lage ny oppgave uten å må slette alt i feltet
             oppgaveInput.value = "";
 
+        } else {
+            alert("Boksen kan ikke være tom!");
+        
+        
+
             // får slett knappen til å fjerne en oppgave
             const slettKnapp = li.querySelector(".slett");
             slettKnapp.addEventListener("click", function () {
@@ -63,8 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Legg til en funksjon for å oppdatere poengsum og totalt antall oppgaver
     function oppdaterPoengsum() {
-        const fullførteOppgaver = document.querySelectorAll(".task-checkbox:checked").length;
         totaltAntallOppgaver = document.querySelectorAll(".task-checkbox").length;
+        const fullførteOppgaver = document.querySelectorAll(".task-checkbox:checked").length;
         poengSummen = fullførteOppgaver;
 
         // Oppdaterer poengSum-elementet
@@ -86,3 +90,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
